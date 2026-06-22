@@ -8,49 +8,94 @@
 body {
     margin: 0;
     padding: 1rem;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
+}
+
+header, .panel {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
 }
 
 header {
-    background-color: #333;
+    background: #333;
     color: white;
     text-align: center;
-    padding: 1rem;
+}
+
+.form-group {
     margin-bottom: 1rem;
 }
 
-.panel {
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    margin-bottom: 1rem;
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+input, button {
+    padding: 0.5rem;
 }
 
 input {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 0.75rem;
 }
 
 button {
-    padding: 0.5rem 1rem;
     cursor: pointer;
 }
 
-.reflection {
-    margin-bottom: 0;
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.hidden {
+    display: none;
+}
+
+#lootRows, .loot-row {
+    display: contents;
+}
+
+.loot-table {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.loot-header {
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.25rem;
+}
+
+.loot-cell {
+    padding: 0.25rem 0;
+}
+
+.loot-cell button {
+    width: 100%;
+}
+
+.total-row, #resultsPanel {
+    margin-top: 1rem;
+}
+
+.total-row {
+    font-weight: bold;
+}
+
+#resultsPanel {
+    line-height: 1.8;
 }
 
 @media (min-width: 768px) {
-
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-    }
-
-    header {
-        grid-column: span 2;
     }
 
     .reflection {
